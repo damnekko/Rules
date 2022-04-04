@@ -375,7 +375,7 @@ rule-providers:
   PayPal:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/damnekko/Rules/main/Stash/Rules/PayPal.yaml"
+    url: "https://cdn.jsdelivr.net/gh/damnekko/Rules@main/Stash/Rules/PayPal.yaml"
     path: ./ruleset/PayPal.yaml
     interval: 86400
 
@@ -424,7 +424,7 @@ rule-providers:
   Dmm:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/damnekko/Rules/main/Stash/Rules/Dmm.yaml"
+    url: "https://cdn.jsdelivr.net/gh/damnekko/Rules@main/Stash/Rules/Dmm.yaml"
     path: ./ruleset/Dmm.yaml
     interval: 86400
 
