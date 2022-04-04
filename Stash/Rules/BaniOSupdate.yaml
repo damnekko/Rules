@@ -1,0 +1,6 @@
+# BaniOSupdate.list
+payload:
+
+ - DOMAIN-SUFFIX,mesu.apple.com
+ - DOMAIN-SUFFIX,gdmf.apple.com
+ - DOMAIN-SUFFIX,updates-http.cdn-apple.com
