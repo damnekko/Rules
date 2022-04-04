@@ -27,17 +27,32 @@ proxy-providers:
   US:
     <<: *All #引用锚点内容
     filter: 美|🇺🇲|US|(?i)States|American
-    
+
+  #亚洲节点
+  Asia:
+    <<: *All
+    filter: 亚洲|(?i)Asia
+
   #香港节点
   HK:
     <<: *All
     filter: 港|🇭🇰|HK|(?i)Hong
 
+  #新加坡节点
+  SG:
+    <<: *All
+    filter: 新加坡|🇸🇬|SG|(?i)Singapore
+
   #日本节点
   JP:
     <<: *All
     filter: 日|🇯🇵|东京|JP|(?i)Japan
- 
+
+  #韩国节点
+  KR:
+    <<: *All
+    filter: 韩|🇰🇷|首尔|KR|(?i)Korea
+
   #台湾节点
   TW:
     <<: *All
@@ -73,6 +88,21 @@ dns:
 proxies:
             
 proxy-groups:
+  - name: 节点选择
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Proxy.png
+    proxies:
+      - 手动切换
+      - 自动选择
+      - 亚洲节点
+      - 香港节点
+      - 新加坡节点
+      - 日本节点
+      - 韩国节点
+      - 美国节点
+      - 台湾节点
+      - DIRECT
+      
   - name: 手动切换
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Rocket.png
@@ -88,27 +118,19 @@ proxy-groups:
        - All
     url: "http://www.gstatic.com/generate_204"
     interval: 300
-    
-    - name: PayPal
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png
-    proxies:
-      - 手动切换
-      - 自动选择
-      - 香港节点
-      - 日本节点
-      - 美国节点
-      - 台湾节点
-      - DIRECT
       
   - name: YouTube
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
     proxies:
+      - 节点选择
       - 手动切换
       - 自动选择
+      - 亚洲节点
       - 香港节点
+      - 新加坡节点
       - 日本节点
+      - 韩国节点
       - 美国节点
       - 台湾节点
       - DIRECT
@@ -117,10 +139,14 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
     proxies:
+      - 节点选择
       - 手动切换
       - 自动选择
+      - 亚洲节点
       - 香港节点
+      - 新加坡节点
       - 日本节点
+      - 韩国节点
       - 美国节点
       - 台湾节点
       - DIRECT
@@ -129,12 +155,24 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/DisneyPlus.png
     proxies:
+      - 节点选择
       - 手动切换
       - 自动选择
+      - 亚洲节点
       - 香港节点
+      - 新加坡节点
       - 日本节点
+      - 韩国节点
       - 美国节点
       - 台湾节点
+      - DIRECT
+
+  - name: Dmm
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/blob/master/IconSet/Color/Game.png
+    proxies:
+      - 手动切换
+      - 日本节点
       - DIRECT
 
   - name: 巴哈姆特
@@ -142,12 +180,7 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bahamut.png
     proxies:
       - 台湾节点
-      - 香港节点
-      - 日本节点
-      - 美国节点
-      - 自动选择
-      - 手动切换
-      - DIRECT
+      
 
   - name: AdBlock
     type: select
@@ -155,14 +188,39 @@ proxy-groups:
     proxies:
       - REJECT
 
+  - name: iOSupdate
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/blob/master/IconSet/Color/Apple_1.png
+    proxies:
+      - REJECT
+      - DIRECT
+
+  - name: PayPal
+    type: select
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/PayPal.png
+    proxies:
+      - 自动选择
+      - 亚洲节点
+      - 香港节点
+      - 新加坡节点
+      - 日本节点
+      - 韩国节点
+      - 美国节点
+      - 台湾节点
+      - DIRECT
+
   - name: 国外网站
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
     proxies:
+      - 节点选择
       - 手动切换
       - 自动选择
+      - 亚洲节点
       - 香港节点
+      - 新加坡节点
       - 日本节点
+      - 韩国节点
       - 美国节点
       - 台湾节点
       - DIRECT
@@ -171,10 +229,14 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
     proxies:
+      - 节点选择
       - 手动切换
       - 自动选择
+      - 亚洲节点
       - 香港节点
+      - 新加坡节点
       - 日本节点
+      - 韩国节点
       - 美国节点
       - 台湾节点
       - DIRECT
@@ -183,10 +245,14 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
     proxies:
+      - 节点选择
       - 手动切换
       - 自动选择
+      - 亚洲节点
       - 香港节点
+      - 新加坡节点
       - 日本节点
+      - 韩国节点
       - 美国节点
       - 台湾节点
       - DIRECT
@@ -202,33 +268,28 @@ proxy-groups:
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png
     proxies:
       - DIRECT
-      - 自动选择
-      - 手动切换
-      - 香港节点
-      - 日本节点
-      - 美国节点
-      - 台湾节点
-      
-  - name: Dmm
-    type: select
-    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
-    proxies:
       - 手动切换
       - 自动选择
+      - 亚洲节点
       - 香港节点
+      - 新加坡节点
       - 日本节点
+      - 韩国节点
       - 美国节点
       - 台湾节点
-      - DIRECT
 
   - name: 游戏平台
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
     proxies:
+      - 节点选择
       - 手动切换
       - 自动选择
+      - 亚洲节点
       - 香港节点
+      - 新加坡节点
       - 日本节点
+      - 韩国节点
       - 美国节点
       - 台湾节点
       - DIRECT
@@ -240,8 +301,11 @@ proxy-groups:
       - DIRECT
       - 手动切换
       - 自动选择
+      - 亚洲节点
       - 香港节点
+      - 新加坡节点
       - 日本节点
+      - 韩国节点
       - 美国节点
       - 台湾节点
 
@@ -249,45 +313,79 @@ proxy-groups:
     type: select
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
     proxies:
+      - 节点选择
       - 手动切换
       - 自动选择
+      - 亚洲节点
       - 香港节点
+      - 新加坡节点
       - 日本节点
+      - 韩国节点
       - 美国节点
       - 台湾节点
       - DIRECT
 
   - name: 香港节点
-    type: select
+    type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
     use:
       - HK
-    proxies:
-      - DIRECT
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+ 
+     
 
   - name: 日本节点
-    type: select
+    type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
     use:
       - JP
-    proxies:
-      - DIRECT
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+
+      
      
   - name: 台湾节点
-    type: select
+    type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
     use:
       - TW
-    proxies:
-      - DIRECT
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+ 
+      
 
   - name: 美国节点
-    type: select
+    type: url-test
     icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
     use:
       - US
-    proxies:
-      - DIRECT
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+
+  - name: 新加坡节点
+    type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+    use:
+      - SG
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+
+  - name: 韩国节点
+    type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+    use:
+      - KR
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300
+
+  - name: 亚洲节点
+    type: url-test
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/CN.png
+    use:
+      - Asia
+    url: "http://www.gstatic.com/generate_204"
+    interval: 300     
 
 rule-providers:
 
@@ -304,15 +402,14 @@ rule-providers:
     url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Domain.yaml"
     path: ./ruleset/AdDomain.yaml
     interval: 86400
-    
-  PayPal:
+
+  iOSupdate:
     type: http
     behavior: classical
-    url: "https://raw.githubusercontent.com/damnekko/Rules/main/Stash/Rules/PayPal.yaml"
-    path: ./ruleset/PayPal.yaml
+    url: "https://raw.githubusercontent.com/damnekko/Rules/main/Stash/Rules/BaniOSupdate.yaml"
+    path: ./ruleset/iOSupdate.yaml
     interval: 86400
-      
-        
+
   YouTube:
     type: http
     behavior: classical
@@ -368,7 +465,14 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/blackmatrix7/ios_rule_script@master/rule/Clash/BiliBili/BiliBili.yaml"
     path: ./ruleset/BiliBili.yaml
     interval: 86400
-    
+
+  PayPal:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/damnekko/Rules/main/Stash/Rules/PayPal.yaml"
+    path: ./ruleset/PayPal.yaml
+    interval: 86400
+  
   Dmm:
     type: http
     behavior: classical
@@ -413,6 +517,9 @@ rules:
   - RULE-SET,YouTube,YouTube
   - RULE-SET,Netflix,NETFLIX
   - RULE-SET,Disney,Disney+
+  - RULE-SET,iOSupdate,iOSupdate
+  - RULE-SET,PayPal,PayPal
+  - RULE-SET,Dmm,Dmm
   - RULE-SET,Bahamut,巴哈姆特
   - RULE-SET,Apple,苹果服务
   - RULE-SET,Microsoft,微软服务
