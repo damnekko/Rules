@@ -10,6 +10,7 @@ payload:
   - DOMAIN-SUFFIX,mbga.jp
  
 # >> ACG POWER
+  - DOMAIN-SUFFIX,netmarble.com
   - DOMAIN-SUFFIX,wikiwiki.jp
   - DOMAIN-SUFFIX,s.ytimg.com
   - DOMAIN-SUFFIX,i.ytimg.com
